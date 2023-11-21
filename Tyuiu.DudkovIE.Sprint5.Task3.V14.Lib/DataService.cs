@@ -9,7 +9,7 @@ namespace Tyuiu.DudkovIE.Sprint5.Task3.V14.Lib
 {
     public class DataService : ISprint5Task3V14
     {
-        public double SaveToFileTextData(int x)
+        public string SaveToFileTextData(int x)
         {
             string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask3.bin";
             double y = (4 * Math.Pow(x, 3)) / (Math.Pow(x, 3) - 1);
@@ -19,7 +19,7 @@ namespace Tyuiu.DudkovIE.Sprint5.Task3.V14.Lib
             {
                 writer.Write(BitConverter.GetBytes(y));
             }
-            return y;
+            return path;
         }
     }
 }
